@@ -77,6 +77,7 @@ h3 {
 
 .container img {
   padding-bottom: 10px;
+  width: 100%;
 }
 
 p {
@@ -91,8 +92,10 @@ p {
   }
   .container {
     display: block;
+    padding: 0 10px;
   }
   .box {
-    width: 330px;
+    width: 100%;
+    margin: 0 0 30px;
   }
 }
