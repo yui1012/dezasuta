@@ -83,7 +83,7 @@ html {
   text-align: center;
 }
 
-/* ここから課題 */
+/* pc版 */
 
 /* main */
 
@@ -139,14 +139,14 @@ main {
   padding-top: 56px;
   padding-bottom: 40px;
 }
-.about_container :nth-child(2) {
+.about_container :nth-child(3) {
   font-size: 44px;
   font-weight: 100;
   line-height: 1.38;
   margin-bottom: 23px;
 }
 
-.about_container :nth-child(3) {
+.about_container :nth-child(4) {
   line-height: 1.62;
 }
 
@@ -258,6 +258,9 @@ main {
 .footer_copyright {
   text-align: center;
   margin-bottom: 75px;
+}
+
+.footer_copyright p {
   color: black;
 }
 
@@ -351,5 +354,147 @@ main {
     font-size: 18px;
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
       "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  }
+}
+
+/* SP版始まり */
+.sp_only {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .sp_only {
+    display: block;
+    margin: 0 auto;
+  }
+  .pc_only {
+    display: none;
+  }
+  /* ここから課題（sp版） */
+  .text :nth-child(1) {
+    font-size: 17px;
+    padding-top: 40px;
+    margin-bottom: 23px;
+  }
+  .text :nth-child(2) {
+    font-size: 38px;
+    line-height: 1.15;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+  }
+  .text :nth-child(3) {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    padding-bottom: 0px;
+    line-height: 1.87;
+  }
+  .about {
+    width: 100%;
+    display: block;
+  }
+
+  .about_container {
+    width: 100%;
+    padding: 0;
+  }
+  .about_container h2 {
+    width: 160px;
+    margin: 0 auto;
+    padding-top: 55px;
+    padding-bottom: 17px;
+  }
+
+  .about_container p {
+    padding: 0px 20px;
+  }
+  .about_container :nth-child(2) {
+    font-size: 36px;
+    line-height: 1.25;
+    margin-bottom: 23px;
+  }
+
+  .about_container :nth-child(3) {
+    font-size: 36px;
+    line-height: 1.31;
+  }
+
+  .menu {
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+  .menu h2 {
+    width: 87px;
+    padding-top: 46px;
+    padding-bottom: 17px;
+  }
+  .menu_container {
+    display: block;
+  }
+  .menu_item {
+    width: 100%;
+  }
+
+  .menu_item h3 {
+    font-size: 40px;
+  }
+  .menu_item p {
+    line-height: 1.58;
+    font-size: 17px;
+    padding-bottom: 50px;
+  }
+
+  .gallery h2 {
+    width: 142px;
+    padding-top: 40px;
+    padding-bottom: 15px;
+  }
+
+  .event {
+    padding: 0 20px;
+  }
+  .event h2 {
+    width: 100px;
+    padding-top: 23px;
+    padding-bottom: 16px;
+  }
+  .event_box {
+    justify-content: center;
+    padding: 22px 10px 15px;
+  }
+
+  .event_box ul {
+    font-size: 16px;
+  }
+
+  .access h2 {
+    width: 124px;
+    padding-top: 25px;
+    padding-bottom: 5px;
+  }
+  .accessmap iframe {
+    height: 191px;
+  }
+
+  .footer_box {
+    display: block;
+    padding-top: 0;
+    padding-left: 20px;
+  }
+  .footer_logo {
+    padding-top: 40px;
+    padding-bottom: 34px;
+  }
+  .footer_box p {
+    font-size: 18px;
+    padding-bottom: 40px;
+  }
+  .footer_copyright {
+    margin-bottom: 27px;
+  }
+  .pagetop {
+    right: 12px;
+    bottom: 12px;
+    width: 100px;
   }
 }
