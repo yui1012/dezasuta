@@ -172,6 +172,7 @@ main {
 }
 .menu_item img {
   border-top-right-radius: 41px;
+  width: 100%;
 }
 .menu_item h3 {
   color: #d30202;
@@ -355,6 +356,19 @@ main {
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
       "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   }
+  /* 文字サイズ変更 */
+  .text :nth-child(1) {
+    font-size: 25px;
+  }
+  .text :nth-child(2) {
+    font-size: 70px;
+  }
+  .text :nth-child(3) {
+    font-size: 20px;
+  }
+  .about_container :nth-child(3) {
+    font-size: 38px;
+  }
 }
 
 /* SP版始まり */
@@ -419,9 +433,10 @@ main {
   }
 
   .menu {
-    max-width: 300px;
     margin: 0 auto;
     display: block;
+    padding-left: 35px;
+    padding-right: 35px;
   }
   .menu h2 {
     width: 87px;
@@ -434,7 +449,6 @@ main {
   .menu_item {
     width: 100%;
   }
-
   .menu_item h3 {
     font-size: 40px;
   }
@@ -459,8 +473,17 @@ main {
     padding-bottom: 16px;
   }
   .event_box {
+    display: block;
     justify-content: center;
-    padding: 22px 10px 15px;
+    padding: 22px 22px 15px;
+  }
+
+  .event_box a {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   .event_box ul {
@@ -483,11 +506,12 @@ main {
   }
   .footer_logo {
     padding-top: 40px;
-    padding-bottom: 34px;
+    padding-bottom: 20px;
   }
   .footer_box p {
     font-size: 18px;
     padding-bottom: 40px;
+    line-height: 1.72;
   }
   .footer_copyright {
     margin-bottom: 27px;
