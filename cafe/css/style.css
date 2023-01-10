@@ -82,10 +82,18 @@ html {
     "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   text-align: center;
 }
-
-/* pc版 */
-
-/* main */
+/* スライダー調整 */
+.slick-dots {
+  bottom: 20px;
+}
+.slick-dots li button::before,
+.slick-dots li.slick-active button:before {
+  color: #fff;
+}
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+/* pc版 main */
 
 main {
   background-color: #e8d9bf;
@@ -185,14 +193,38 @@ main {
   font-size: 17px;
 }
 
+.gallery {
+  width: 100%;
+}
 .gallery h2 {
   width: 245px;
   margin: 0 auto;
   padding-top: 80px;
   padding-bottom: 27px;
 }
-.gallery ul {
-  display: flex;
+
+/*  課題です！！ スライダーの矢印 pc版 */
+
+.prev {
+  z-index: 100;
+  position: absolute;
+  top: 45%;
+  right: 22%;
+  border-top: solid 5px #fff;
+  border-right: solid 5px #fff;
+  width: 27px;
+  height: 27px;
+  transform: rotate(45deg);
+}
+.next {
+  position: absolute;
+  top: 45%;
+  left: 22%;
+  border-bottom: solid 5px #fff;
+  border-left: solid 5px #fff;
+  width: 27px;
+  height: 27px;
+  transform: rotate(45deg);
 }
 
 .event {
@@ -237,6 +269,7 @@ main {
   width: 100%;
   height: 470px;
 }
+/* footer */
 
 .footer_box {
   max-width: 1000px;
@@ -271,6 +304,7 @@ main {
   bottom: 40px;
   width: 125px;
 }
+/* ここまでpc版 */
 
 .sp_nav,
 .sp_btn {
@@ -371,7 +405,7 @@ main {
   }
 }
 
-/* SP版始まり */
+/* SP版 始まり */
 .sp_only {
   display: none;
 }
@@ -384,7 +418,7 @@ main {
   .pc_only {
     display: none;
   }
-  /* ここから課題（sp版） */
+
   .text :nth-child(1) {
     font-size: 17px;
     padding-top: 40px;
@@ -520,5 +554,31 @@ main {
     right: 12px;
     bottom: 12px;
     width: 100px;
+  }
+
+  .gallery_slider img {
+    width: 100%;
+  }
+  /*  課題です！！ スライダーの矢印 sp版*/
+  .prev {
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
+  }
+  .next {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    border-bottom: solid 2px #fff;
+    border-left: solid 2px #fff;
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
   }
 }

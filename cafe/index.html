@@ -7,8 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>デザインカフェ</title>
     <meta name="description" content="デザインカフェのサイトです。">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </head>
 
 <body>
@@ -19,6 +24,12 @@
                 <picture>
                     <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width: 767px)">
                     <img src="images/pc_first-100.jpg" alt="店内の様子">
+                </picture>
+            </div>
+            <div>
+                <picture>
+                    <source srcset="images/sp_main_vs_2@2x-100.jpg" media="(max-width: 767px)">
+                    <img src="images/slider_2.jpg" alt="店内の様子">
                 </picture>
             </div>
         </div>
@@ -114,14 +125,16 @@
             <h2>
                 <img src="images/gallery@2x.png" alt="GALLERY">
             </h2>
-            <img class="sp_only" src="images/mobile_gallery-100.jpg" alt="店内風景">
-            <ul>
-                <li><img class="pc_only" src="images/pc_gallary_05-100.jpg" alt="賑わった店内"></li>
-                <li><img class="pc_only" src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></li>
-                <li><img class="pc_only" src="images/pc_gallary_03-100.jpg" alt="店内風景"></li>
-                <li><img class="pc_only" src="images/pc_gallary_02-100.jpg" alt="カフェ文字入り"></li>
-                <li><img class="pc_only" src="images/pc_gallary_01-100.jpg" alt="カプチーノ"></li>
-            </ul>
+
+            <div class="gallery_slider">
+                <div><img src="images/pc_gallary_05-100.jpg" alt="賑わった店内"></div>
+                <div><img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></div>
+                <div><img src="images/pc_gallary_03-100.jpg" alt="店内風景"></div>
+                <div><img src="images/pc_gallary_02-100.jpg" alt="カフェ文字入り"></div>
+                <div><img src="images/pc_gallary_01-100.jpg" alt="カプチーノ"></div>
+                <div><img src="images/pc_gallary_01-100.jpg" alt="カプチーノ"></div>
+
+            </div>
 
         </section>
         <section class="event" id="event">
@@ -194,6 +207,36 @@
                 $('.sp_btn').toggleClass('open');
                 $('.sp_nav').fadeToggle();
             });
+
+            $(".header_slider").slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: false,
+
+            });
+            // 課題です！！ギャラリーのスライダー
+            $(".gallery_slider").slick({
+                arrows: true,
+                prevArrow: '<div class="prev"></div>',
+                nextArrow: '<div class="next"></div>',
+                infinite: true,
+                pauseOnHover: false,
+                pauseOnFocus: false,
+                cssEase: 'linear',
+                slidesToShow: 5,
+                slidesToScroll: 3,
+                responsive: [
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    }]
+
+
+            })
         });
     </script>
 </body>
