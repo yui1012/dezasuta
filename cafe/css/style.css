@@ -205,26 +205,26 @@ main {
 
 /*  課題です！！ スライダーの矢印 pc版 */
 
-.prev {
-  z-index: 100;
+.next {
   position: absolute;
-  top: 45%;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
   right: 22%;
   border-top: solid 5px #fff;
   border-right: solid 5px #fff;
   width: 27px;
   height: 27px;
-  transform: rotate(45deg);
 }
-.next {
+.prev {
+  z-index: 100;
   position: absolute;
-  top: 45%;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
   left: 22%;
   border-bottom: solid 5px #fff;
   border-left: solid 5px #fff;
   width: 27px;
   height: 27px;
-  transform: rotate(45deg);
 }
 
 .event {
@@ -560,25 +560,20 @@ main {
     width: 100%;
   }
   /*  課題です！！ スライダーの矢印 sp版*/
-  .prev {
-    z-index: 100;
+  .next {
     position: absolute;
-    top: 50%;
     right: 20px;
     border-top: solid 2px #fff;
     border-right: solid 2px #fff;
     width: 16px;
     height: 16px;
-    transform: rotate(45deg);
   }
-  .next {
+  .prev {
     position: absolute;
-    top: 50%;
     left: 20px;
     border-bottom: solid 2px #fff;
     border-left: solid 2px #fff;
     width: 16px;
     height: 16px;
-    transform: rotate(45deg);
   }
 }
